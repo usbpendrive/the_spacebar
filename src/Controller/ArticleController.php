@@ -22,4 +22,14 @@ class ArticleController
     {
         return new Response("Symfony 4 Homepage");
     }
+
+    /**
+     * @Route("/news/{slug}")
+     * @param $slug
+     * @return Response
+     */
+    public function show($slug)
+    {
+        return new Response(sprintf('Future page to show the article: "%s"', $slug));
+    }
 }
