@@ -31,8 +31,15 @@ class ArticleController extends AbstractController
      */
     public function show($slug)
     {
+        $comments = [
+            'Drain pork shoulder fairly, then mix with cream and serve freshly in sauté pan.',
+            'All children like sliced raspberries in buttermilk and thyme.',
+            'Per guest prepare eight pounds of salad cream with shreded seaweed for dessert.'
+        ];
+
         return $this->render('article/show.html.twig', [
-            'title' => ucwords(str_replace('-', ' ', $slug))
+            'title' => ucwords(str_replace('-', ' ', $slug)),
+            'comments' => $comments,
         ]);
     }
 }

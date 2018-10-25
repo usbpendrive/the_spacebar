@@ -5,3 +5,10 @@
     <p>Everything we do is connected with booda-hood: advice, volume, uniqueness, enlightenment.</p>
     <p>Est germanus pars, cesaris.</p>
 </div>
+
+<h2>Comments</h2>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+    {% endfor %}
+</ul>
