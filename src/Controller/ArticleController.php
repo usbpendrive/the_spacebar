@@ -37,6 +37,8 @@ class ArticleController extends AbstractController
             'Per guest prepare eight pounds of salad cream with shreded seaweed for dessert.'
         ];
 
+        //dump($slug, $this);
+
         return $this->render('article/show.html.twig', [
             'title' => ucwords(str_replace('-', ' ', $slug)),
             'comments' => $comments,
